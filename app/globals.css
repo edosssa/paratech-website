@@ -1,0 +1,95 @@
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('/fonts/Euclid Circular B Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('/fonts/Euclid Circular B Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('/fonts/Euclid Circular B Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('/fonts/Euclid Circular B SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('/fonts/Euclid Circular B Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Euclid Circular B';
+  src: url('/fonts/Euclid Circular B Bold.ttf') format('truetype');
+  font-weight: 800;
+}
+
+html,
+body,
+iframe {
+  padding: 0;
+  margin: 0;
+  font-family: 'Euclid Circular B', sans-serif;
+  font-variant: none;
+  height: 100%;
+  margin: 0 auto;
+  color: #222222;
+  scroll-behavior: smooth;
+}
+
+div[id='__next'] {
+  height: 100%;
+  opacity: 1 !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.curved-border svg > path {
+  stroke-dashoffset: 142.4248809814453px;
+  stroke-dasharray: 142.4248809814453px;
+  -webkit-transition: stroke-dashoffset 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+  transition: stroke-dashoffset 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+}
+
+.curved-border.active svg > path {
+  stroke-dashoffset: 0;
+}
+
+.squiggly-arrow svg .path-1 {
+  stroke-dashoffset: 162.16624450683594px;
+  stroke-dasharray: 162.16624450683594px;
+  -webkit-transition: stroke-dashoffset 1s ease-in-out 0s;
+  transition: stroke-dashoffset 1s ease-in-out 0s;
+}
+
+.squiggly-arrow.active svg .path-1 {
+  stroke-dashoffset: 0;
+}
+
+.squiggly-arrow svg .path-2 {
+  stroke-dashoffset: 26.92658233642578px;
+  stroke-dasharray: 26.92658233642578px;
+  -webkit-transition: stroke-dashoffset 1s ease-in-out 0.5s;
+  transition: stroke-dashoffset 1s ease-in-out 0.5s;
+}
+
+.squiggly-arrow.active .path-2 {
+  stroke-dashoffset: 0;
+}
