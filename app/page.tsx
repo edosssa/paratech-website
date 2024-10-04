@@ -21,7 +21,7 @@ import { View, waitlistFormId } from './constants';
 import { generateContent } from './content';
 
 const Home = () => {
-  const [view, setView] = useState<View>(View.Personal);
+  const [view, setView] = useState<View>(View.Business);
   const content = generateContent[view];
   const router = useRouter();
   const pathname = usePathname();
@@ -51,7 +51,7 @@ const Home = () => {
 
   return (
     <Fragment>
-      <Navbar ref={navbarRef} onClick={handleOnToggleView} view={view} />
+      {/* <Navbar ref={navbarRef} onClick={handleOnToggleView} view={view} /> */}
       <VerticalStack as='main' mt={{ base: '12', md: '20' }}>
         <Container
           as={motion.section}
@@ -82,7 +82,7 @@ const Home = () => {
           justify={{ base: 'flex-start', md: 'center' }}
           pos='sticky'
           h={{ base: '60vh', md: '40vh' }}
-          mt={`${navbarSize?.height}`}
+          my={`${navbarSize?.height}`}
           top={{
             base: `calc(var(--chakra-space-2) + ${navbarSize?.height}px)`,
             md: `calc(var(--chakra-space-10) + ${navbarSize?.height}px)`,
@@ -90,31 +90,13 @@ const Home = () => {
         >
           <LandingImage src={content.landingImage} alt={content.landingImageAlt} />
         </Container>
-        <Container mt='6' pb={{ base: '7', md: '10' }} zIndex='100' bg='white'>
-          <Flex
-            as='section'
-            w='full'
-            flexDir={{ base: 'column', lg: 'row' }}
-            justify='space-between'
-            sx={bannerWrapperProps}
-            bg='white'
-            pt={{ base: '10', md: '14' }}
-          >
-            <ScanQRBanner
-              mb={{ base: '5', md: '8', lg: 'unset' }}
-              heading={content.scanQRBannerHeading}
-              {...bannerItemProps}
-            />
-            <SplitPaymentBanner {...bannerItemProps} />
-          </Flex>
-        </Container>
-        <Container pb='24' bg='white' zIndex='100'>
-          <PaymentSuccessfulBanner heading={content.paymentSuccessfulHeading} />
-        </Container>
+        
+     
         <VerticalStack
           as='section'
           w='full'
           bg='grey.100'
+          mt={20}
           py={{ base: '28', md: '36' }}
           zIndex='100'
         >
@@ -127,7 +109,7 @@ const Home = () => {
                 fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
                 fontWeight='500'
               >
-                Experience bill managements like never before
+                Experience property management like never before
               </Heading>
               <WaitListForm label={content.ctaText} />
             </VerticalStack>

@@ -8,7 +8,7 @@ const BusinessLandingHeading = () => (
   <Text>
     Elevate your Business efficiency with
     <Text as='em' fontStyle='normal' display='inline-block' pos='relative' w='auto'>
-      &nbsp;Para Technologies
+      &nbsp;Para
       <Text
         as='span'
         w='full'
@@ -37,11 +37,11 @@ export const generateContent = {
     waitlistHeader: 'Experience bill managements like never before',
   },
   [View.Business]: {
-    landingImage: '/images/customer-scan-qr-2.webp',
+    landingImage: '/images/customer-scan-qr.webp',
     landingImageAlt: 'A customer scanning QR code in shop',
     landingHeading: <BusinessLandingHeading />,
     landingSubheading:
-      'Be the first to use the best receipt management system with easy scan, pay, and manage functions by getting on our waiting list right away.',
+      'Be the first to use the best property management system and manage functions by getting on our waiting list right away.',
     ctaText: 'Book Demo',
     scanQRBannerHeading:
       'Your customers scan the QR code on their table for immediate access to your menu.',
